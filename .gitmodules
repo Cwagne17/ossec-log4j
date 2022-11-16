@@ -1,0 +1,6 @@
+[submodule "JNDI-Injection-Exploit"]
+	path = JNDI-Injection-Exploit
+	url = https://github.com/Cwagne17/JNDI-Injection-Exploit.git
+[submodule "log4shell-vulnerable-app"]
+	path = log4shell-vulnerable-app
+	url = https://github.com/Cwagne17/log4shell-vulnerable-app.git

