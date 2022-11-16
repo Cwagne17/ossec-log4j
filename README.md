@@ -19,6 +19,12 @@ The docker compose environment will generate two containers.
 1. LDAP Server
 2. Vulnerable Application
 
+Two terminals can be opened to view the logs
+
+```console
+docker compose logs -ft <service-in-compose-file>
+```
+
 ## Exploit
 
 On the host, set up a terminal to listen for incomming requests on port tcp/3000.
